@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'home_trips.dart';
-import 'search_trips.dart';
-import 'profile_trips.dart';
+import '../widgets/stack_viajes.dart';
+import '../widgets/buscar_viajes.dart';
+import '../widgets/perfil.dart';
 
 class PlatziTripsCupertino extends StatelessWidget {
   @override
@@ -14,15 +14,15 @@ class PlatziTripsCupertino extends StatelessWidget {
             items: [
               BottomNavigationBarItem(
                   icon: Icon(Icons.home, color: Colors.indigo),
-                  title: Text("")
+                  label: ("")
               ),
               BottomNavigationBarItem(
                   icon: Icon(Icons.search, color: Colors.indigo),
-                  title: Text("")
+                  label: ("")
               ),
               BottomNavigationBarItem(
                   icon: Icon(Icons.person, color: Colors.indigo),
-                  title: Text("")
+                  label: ("")
               ),
             ]
         ),
@@ -31,20 +31,21 @@ class PlatziTripsCupertino extends StatelessWidget {
           switch (index) {
             case 0:
               return CupertinoTabView(
-                builder: (BuildContext context) => HomeTrips(),
+                builder: (BuildContext context) => StackViajes(),
               );
               break;
             case 1:
               return CupertinoTabView(
-                builder: (BuildContext context) => SearchTrips(),
+                builder: (BuildContext context) => BuscarViajes(),
               );
               break;
             case 2:
               return CupertinoTabView(
-                builder: (BuildContext context) => ProfileTrips(),
+                builder: (BuildContext context) => Perfil(),
               );
               break;
-
+            default:
+              return null;
           }
 
         },

@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'button_purple.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'boton.dart';
 
-class DescriptionPlace extends StatelessWidget {
+class DescripcionLugar extends StatelessWidget {
 
   String namePlace;
   int stars;
   String descriptionPlace;
 
-  DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace);
-
-
+  DescripcionLugar(this.namePlace, this.stars, this.descriptionPlace);
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +61,7 @@ class DescriptionPlace extends StatelessWidget {
 
           child: Text(
             namePlace,
-            style: TextStyle(
-              fontFamily: "Lato",
+            style: GoogleFonts.lato(
               fontSize: 30.0,
               fontWeight: FontWeight.w900
             ),
@@ -95,13 +93,11 @@ class DescriptionPlace extends StatelessWidget {
       ),
       child: new Text(
         descriptionPlace,
-        style: const TextStyle(
-            fontFamily: "Lato",
-            fontSize: 16.0,
-            fontWeight: FontWeight.bold,
-            color: Color(0xFF56575a)
+        style: GoogleFonts.lato(
+          fontSize: 16.0,
+          fontWeight: FontWeight.bold,
+          color: Color(0xFF56575a)
         ),
-
       ),
     );
 
@@ -110,7 +106,7 @@ class DescriptionPlace extends StatelessWidget {
       children: <Widget>[
         title_stars,
         description,
-        ButtonPurple("Navigate")
+        Boton("Navigate")
       ],
     );
 

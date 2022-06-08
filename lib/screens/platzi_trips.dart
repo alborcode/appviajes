@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'home_trips.dart';
-import 'search_trips.dart';
-import 'profile_trips.dart';
+import '../widgets/stack_viajes.dart';
+import '../widgets/buscar_viajes.dart';
+import '../widgets/perfil.dart';
 
 class PlatziTrips extends StatefulWidget {
   @override
@@ -15,9 +15,9 @@ class PlatziTrips extends StatefulWidget {
 class _PlatziTrips extends State<PlatziTrips> {
   int indexTap = 0;
   final List<Widget> widgetsChildren = [
-    HomeTrips(),
-    SearchTrips(),
-    ProfileTrips()
+    StackViajes(),
+    BuscarViajes(),
+    Perfil()
   ];
 
   void onTapTapped(int index){
@@ -48,15 +48,15 @@ class _PlatziTrips extends State<PlatziTrips> {
             items: [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
-                title: Text("")
+                label: ("")
               ),
               BottomNavigationBarItem(
                   icon: Icon(Icons.search),
-                  title: Text("")
+                  label: ("")
               ),
               BottomNavigationBarItem(
                   icon: Icon(Icons.person),
-                  title: Text("")
+                  label: ("")
               ),
             ]
         ),

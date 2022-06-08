@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:appviajes/widgets/widgets.dart';
 
-class FloatingActionButtonGreen extends StatefulWidget {
+class BotonFlotante extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return _FloatingActionButtonGreen();
+    return BotonFlotanteState();
   }
 
 }
 
 
-class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen> {
+class BotonFlotanteState extends State<BotonFlotante> {
 
   void onPressedFav(){
-    Scaffold.of(context).showSnackBar(
-        SnackBar(
-          content: Text("Agregaste a tus Favoritos"),
-        )
-    );
+
+    mensaje(context, 'Agregaste a tus Favoritos');
 
   }
 

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class GradientBack extends StatelessWidget {
-
+class FondoDegradado extends StatelessWidget {
 
   String title = "Popular";
 
-  GradientBack(this.title);
+  FondoDegradado(this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +28,11 @@ class GradientBack extends StatelessWidget {
 
       child: Text(
         title,
-        style: TextStyle(
-          color: Colors.white,
+        style: GoogleFonts.lato(
           fontSize: 30.0,
-          fontFamily: "Lato",
-          fontWeight: FontWeight.bold
+          color: Colors.white,
+          fontWeight: FontWeight.w700,
+          fontStyle: FontStyle.italic,
         ),
       ),
 

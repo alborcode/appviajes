@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'widgets.dart';
 
 
-class ButtonPurple extends StatelessWidget {
+class Boton extends StatelessWidget {
 
   String buttonText = "Navigate";
 
-  ButtonPurple(this.buttonText);
+  Boton(this.buttonText);
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return InkWell(
       onTap: () {
-        Scaffold.of(context).showSnackBar(
-            SnackBar(
-              content: Text("Navegando"),
-            )
-        );
+        mensaje(context, 'Navegando');
       },
       child: Container(
         margin: EdgeInsets.only(
@@ -45,12 +43,10 @@ class ButtonPurple extends StatelessWidget {
         child: Center(
           child: Text(
             buttonText,
-            style: TextStyle(
+            style: GoogleFonts.lato(
               fontSize: 18.0,
-              fontFamily: "Lato",
               color: Colors.white
             ),
-
           ),
         ),
 

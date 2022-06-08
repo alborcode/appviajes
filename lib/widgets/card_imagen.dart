@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'floating_action_button_green.dart';
+import 'boton_flotante.dart';
 
-class  CardImage extends StatelessWidget {
+class  CardImagen extends StatelessWidget {
 
   String pathImage = "assets/img/beach.jpeg";
 
-  CardImage(this.pathImage);
+  CardImagen(this.pathImage);
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class  CardImage extends StatelessWidget {
       alignment: Alignment(0.9,1.1),
       children: <Widget>[
         card,
-        FloatingActionButtonGreen()
+        BotonFlotante()
       ],
     );
   }

@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class Review extends StatelessWidget {
+class Revision extends StatelessWidget {
 
   String pathImage = "assets/img/people.jpg";
-  String name = "Varuna Yasas";
-  String details = "1 review · 5 photos";
-  String comment = "There is an amazing place in Sri Lanka";
+  String nombre = "Varuna Yasas";
+  String detalles = "1 review · 5 photos";
+  String comentarios = "There is an amazing place in Sri Lanka";
 
-  Review(this.pathImage, this.name, this.details, this.comment);
+  Revision({
+    Key key,
+    this.pathImage,
+    this.nombre,
+    this.detalles,
+    this.comentarios
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,14 +26,12 @@ class Review extends StatelessWidget {
       ),
 
       child: Text(
-        comment,
+        comentarios,
         textAlign: TextAlign.left,
-        style: TextStyle(
-            fontFamily: "Lato",
-            fontSize: 13.0,
-            fontWeight: FontWeight.w900
-        ),
-
+        style: GoogleFonts.lato(
+            fontSize: 13,
+            fontWeight: FontWeight.w900,
+          ),
       ),
 
     );
@@ -37,14 +42,12 @@ class Review extends StatelessWidget {
     ),
 
       child: Text(
-        details,
+        detalles,
         textAlign: TextAlign.left,
-        style: TextStyle(
-            fontFamily: "Lato",
-            fontSize: 13.0,
+        style: GoogleFonts.lato(
+          fontSize: 13.0,
           color: Color(0xFFa3a5a7)
         ),
-
       ),
 
     );
@@ -55,13 +58,11 @@ class Review extends StatelessWidget {
       ),
 
       child: Text(
-        name,
+        nombre,
         textAlign: TextAlign.left,
-        style: TextStyle(
-          fontFamily: "Lato",
-            fontSize: 17.0
+        style: GoogleFonts.lato(
+            fontSize: 17.0,
         ),
-
       ),
 
     );
